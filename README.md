@@ -17,7 +17,7 @@ conda activate venv/
 pip install -r requirements.txt
 ```
 
-### Install all necessary libraries
+### Run the command to run Flask Web App
 
 ```
 python app.py
@@ -31,9 +31,9 @@ Open any web browser and type http://127.0.0.1:5000/ OR http://localhost:5000/
 
 ### Introduction About the Data :
 
-**The dataset** The goal is to find publicly available data for key factors that influence US home prices nationally and build a data science model that explains how these factors impacted home prices over the last 20 years.
+The goal is to find publicly available data for key factors that influence US home prices nationally and build a data science model that explains how these factors impacted home prices over the last 20 years.
 
-Use the 'S&P Case-Schiller' Home Price Index as a proxy for home prices: [fred.stlouisfed.org/series/CSUSHPISA].
+Use the **'S&P Case-Schiller'** Home Price Index as a proxy for home prices: [https://fred.stlouisfed.org/series/CSUSHPISA].
 
 **There are 14 independent variables:**
 
@@ -71,7 +71,7 @@ Use the 'S&P Case-Schiller' Home Price Index as a proxy for home prices: [fred.s
 
 **Public Dataset Source Link :**
 
-##The data were collected publically from Fred Economic data which is publicaly available.
+The data were collected publically from Fred Economic data which is publicaly available.
 
 1. Median_Sale_Price_House - https://fred.stlouisfed.org/series/MSPUS.
 
