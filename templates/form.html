@@ -1,0 +1,234 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: powderblue;
+      }
+      h1 {
+        color: blue;
+        text-align: center;
+      }
+      h2 {
+        color: rgb(106, 106, 149);
+        text-align: center;
+      }
+      p {
+        color: red;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form action="{{url_for('predict_datapoint')}}" method="POST">
+      <div class="form-group">
+        <label for="Median_Sale_Price_House" class="form-label"
+          >Median Sale Price House:</label
+        >
+
+        <input
+          type="text"
+          class="form-control"
+          id="Median_Sale_Price_House"
+          name="Median_Sale_Price_House"
+          placeholder="Enter Median Sale Price of House in US Dollar"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="Personal_Income_Per_Capita" class="form-label"
+          >Personal Income Per Capita:</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="Personal_Income_Per_Capita"
+          name="Personal_Income_Per_Capita"
+          placeholder="Enter Personal Income Per Capita in US Dollar "
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="Property_Tax" class="form-label">Property Tax:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Property_Tax"
+          name="Property_Tax"
+          placeholder="Enter Property Tax in US Dollar"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="Nasdaqcom" class="form-label">Nasdaqcom:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Nasdaqcom"
+          name="Nasdaqcom"
+          placeholder="Enter Nasdaqcom value"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="Construction_Employment_Cost" class="form-label"
+          >Construction Employment Cost:</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="Construction_Employment_Cost"
+          name="Construction_Employment_Cost"
+          placeholder="Enter Construction Employment Cost (0 to 160)"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="Population" class="form-label">Population:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Population"
+          name="Population"
+          placeholder="Enter Population in Thousands"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="New_House_Units_Construction" class="form-label"
+          >New House Units Construction:</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="New_House_Units_Construction"
+          name="New_House_Units_Construction"
+          placeholder="Enter New House Units Construction (0-2000)"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="CPI" class="form-label">CPI:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="CPI"
+          name="CPI"
+          placeholder="Enter CPI (0-20)"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="Mortage_Rate" class="form-label">Mortage Rate:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Mortage_Rate"
+          name="Mortage_Rate"
+          placeholder="Enter Mortage Rate (0-20)"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="Unemployment_Rate" class="form-label"
+          >Unemployment Rate:</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="Unemployment_Rate"
+          name="Unemployment_Rate"
+          placeholder="Enter Unemployment Rate (0-20)"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="Household_Debt_Payment" class="form-label"
+          >Household Debt Payment:</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="Household_Debt_Payment"
+          name="Household_Debt_Payment"
+          placeholder="Enter Household Debt Payment (0-20)"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="Recession_Rate" class="form-label"
+          >Recession Rate Probability:</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="Recession_Rate"
+          name="Recession_Rate"
+          placeholder="Enter Recession Rate Probability (0-100)"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="Date_Quarter" class="form-label">Date Quarter:</label>
+        <select id="Date_Quarter" name="Date_Quarter" class="form-control">
+          <option value="1">Q1</option>
+          <option value="2">Q2</option>
+          <option value="3">Q3</option>
+          <option value="4">Q4</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="Date_Year" class="form-label">Date Year:</label>
+        <select id="Date_Year" name="Date_Year" class="form-control">
+          <option value="2000">2000</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2003">2003</option>
+          <option value="2004">2004</option>
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+        </select>
+      </div>
+
+      <div style="clear: both"></div>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

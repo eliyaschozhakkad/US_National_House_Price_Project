@@ -87,14 +87,4 @@ class ModelTrainer:
             logging.info('Exception occured at Model Training')
             raise CustomException(e,sys)
         
-# from src.components.data_ingestion import DataIngestion
-# from src.components.data_transformation import DataTransformation
 
-# if __name__=='__main__':
-        
-#         obj = DataIngestion()
-#         train_path,test_path = obj.initiate_data_ingestion()
-#         dt = DataTransformation()
-#         train_arr,test_arr,preprocessor_path = dt.initiate_data_transformation(train_path,test_path)
-#         mt = ModelTrainer()
-#         mt.initiate_model_training(train_arr,test_arr)

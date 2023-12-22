@@ -48,9 +48,5 @@ class DataIngestion:
             logging.info('Exception occured at Data Ingestion stage')
             raise CustomException(e,sys)
         
-# if __name__ == "__main__":
 
-#     dataingestion = DataIngestion()
-#     dataingestion.initiate_data_ingestion()
-#     print(dataingestion)
         

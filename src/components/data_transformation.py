@@ -132,10 +132,3 @@ class DataTransformation:
             logging.info('Exception occured in the initial_data_transformation ')
             raise CustomException(e,sys)
         
-
-# if __name__=='__main__':
-        
-#         obj = DataIngestion()
-#         train_path,test_path = obj.initiate_data_ingestion()
-#         dt = DataTransformation()
-#         dt.initiate_data_transformation(train_path,test_path )
